@@ -1,0 +1,13 @@
+#grid {
+    height: 95%;
+}
+#grid >* {
+    height: 45%;
+}
+#grid >*>* {
+    height: 100%;
+}
+
+#info-panel, #borrower-panel, #loan-panel {
+    height: 95%
+}
