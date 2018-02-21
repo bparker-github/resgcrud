@@ -2,7 +2,14 @@ import * as React from 'react';
 import { Panel } from 'react-bootstrap';
 import { RootStateType, BorrowerType } from '../../constants/types';
 import { connect } from 'react-redux';
-import { BootstrapTable, TableHeaderColumn, BootstrapTableProps, TableHeaderColumnProps } from 'react-bootstrap-table';
+import {
+    BootstrapTable,
+    TableHeaderColumn,
+    BootstrapTableProps,
+    TableHeaderColumnProps,
+    CellEdit,
+    SelectRow
+} from 'react-bootstrap-table';
 import { formatAmount, formatDate } from '../../constants/helpers';
 
 import './styles.css';
@@ -44,11 +51,25 @@ class InfoPanelInner extends React.Component<InfoPanelProps, {}> {
             return this.buildBorrowerLabel();
         } else {
             // Declare options for the table and headers.
+            const cellEditProps: CellEdit = {
+                mode: 'dbclick',
+                blurToSave: true
+            };
+            const selectRowProps: SelectRow = {
+                mode: 'radio',
+                bgColor: 'lightgrey',
+                hideSelectColumn: true,
+                clickToSelectAndEditCell: true,
+                // onSelect: (row: LoanType, isSelected: boolean, e: {}) => true
+            };
             const tableProps: BootstrapTableProps = {
                 data: this.props.borrower.loans ? this.props.borrower.loans : [],
                 insertRow: true,
-                deleteRow: true
+                deleteRow: true,
+                cellEdit: cellEditProps,
+                selectRow: selectRowProps
             };
+
             const idProps: TableHeaderColumnProps = {
                 dataField: 'id',
                 isKey: true,

@@ -10,8 +10,6 @@ const mapStateToProps = (state: RootStateType): BorrowerPanelProps => {
 };
 // tslint:disable-next-line:no-any
 const mapDispatchToProps = (dispatch: any) => {
-    // tslint:disable-next-line:max-line-length
-    // const mapDispatchToProps: MapDispatchToPropsParam<{ borrowerIndexChanged: (borrower: BorrowerType) => ActionType<BorrowerType> }, {}> = dispatch => {
     return {
         borrowerIndexChanged: (borrower: BorrowerType) => dispatch(borrowerIndexChanged(borrower))
     };
