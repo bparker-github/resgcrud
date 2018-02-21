@@ -1,0 +1,40 @@
+{
+  "name": "resgcrud",
+  "version": "1.0.0",
+  "description": "The example program tasked.",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "node_modules\\.bin\\tsc",
+    "watch": "node_modules\\.bin\\tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Parker",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bparker-github/resgcrud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bparker-github/resgcrud/issues"
+  },
+  "homepage": "https://github.com/bparker-github/resgcrud#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.3",
+    "@types/express": "^4.11.1",
+    "@types/node": "^9.4.6",
+    "@types/sqlite3": "^3.1.1",
+    "tslint": "^5.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "reflect-metadata": "^0.1.12",
+    "sqlite3": "^3.1.13",
+    "ts-money": "^0.4.4",
+    "typeorm": "^0.1.12",
+    "typescript": "^2.7.2",
+    "typescript-rest": "^1.2.2",
+    "underscore": "^1.8.3"
+  }
+}

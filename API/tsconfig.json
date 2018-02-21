@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [ "es6" ],
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "outDir": "build",
+        "removeComments": false,
+        "sourceMap": true,
+        "target": "es6",
+        "watch": true,
+    }
+}
